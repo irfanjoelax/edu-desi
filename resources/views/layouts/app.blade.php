@@ -249,7 +249,7 @@
                             <div class="d-sm-none d-lg-inline-block"> {{ Auth::user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="features-settings.html" class="dropdown-item has-icon">
+                            <a href="{{ url('admin/setting', []) }}" class="dropdown-item has-icon">
                                 <i class="fas fa-cog"></i> Settings
                             </a>
                             <div class="dropdown-divider"></div>
@@ -289,20 +289,20 @@
                         <li class="menu-header">Master Data</li>
                         <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/home', []) }}">
-                                <i class="fas fa-fire"></i>
+                                <i class="fas fa-book-open"></i>
                                 <span>Materi</span>
                             </a>
                         </li>
                         <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/home', []) }}">
-                                <i class="fas fa-fire"></i>
+                                <i class="fas fa-question-circle"></i>
                                 <span>Soal Ujian</span>
                             </a>
                         </li>
                         <li class="menu-header">Fitur</li>
                         <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/home', []) }}">
-                                <i class="fas fa-fire"></i>
+                                <i class="fas fa-poll-h"></i>
                                 <span>Hasil Ujian</span>
                             </a>
                         </li>
@@ -339,7 +339,6 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://demo.getstisla.com/assets/modules/jquery.min.js"></script>
     <script src="https://demo.getstisla.com/assets/modules/popper.js"></script>
     <script src="https://demo.getstisla.com/assets/modules/tooltip.js"></script>
@@ -362,6 +361,7 @@
     <!-- Template JS File -->
     <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
     <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
+    @include('sweetalert::alert')
 </body>
 
 </html>

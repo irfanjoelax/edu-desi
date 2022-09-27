@@ -23,3 +23,5 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/setting', [App\Http\Controllers\SettingController::class, 'index']);
+Route::post('/admin/setting', [App\Http\Controllers\SettingController::class, 'update']);
