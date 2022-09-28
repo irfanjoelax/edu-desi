@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             MataPelajaranSeeder::class,
             SoalSeeder::class,
+            PenelitiSeeder::class,
         ]);
     }
 }

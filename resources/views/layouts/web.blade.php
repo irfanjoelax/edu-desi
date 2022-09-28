@@ -34,10 +34,11 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a href="#" class="nav-link">Profile Peneliti</a>
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#profileModal">Profile
+                                Peneliti</a>
                         </li>
                         <li class="nav-item active">
-                            <a href="#" class="nav-link">Kontak Saya</a>
+                            <a href="https://wa.me/+6285786444814" target="_blank" class="nav-link">Kontak Saya</a>
                         </li>
                     </ul>
                 </div>
@@ -109,6 +110,9 @@
             </footer>
         </div>
     </div>
+
+    <!-- Modal Profile Peneliti -->
+    <x-profile-modal />
 
     <!-- General JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
