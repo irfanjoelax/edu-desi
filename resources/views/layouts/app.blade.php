@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/jqvmap/dist/jqvmap.min.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/weather-icon/css/weather-icons.min.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/weather-icon/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/datatables/datatables.min.css">
+    <link rel="stylesheet"
+        href="https://demo.getstisla.com/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="https://demo.getstisla.com/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/summernote/summernote-bs4.css">
+    @yield('style')
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
@@ -287,21 +290,27 @@
                             </a>
                         </li>
                         <li class="menu-header">Master Data</li>
-                        <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/home', []) }}">
-                                <i class="fas fa-book-open"></i>
+                        <li class="nav-item {{ $menuActive == 'mata-pelajaran' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/matapelajaran', []) }}">
+                                <i class="fas fa-book"></i>
+                                <span>Mata Pelajaran</span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $menuActive == 'materi' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/materi', []) }}">
+                                <i class="fas fa-book-reader"></i>
                                 <span>Materi</span>
                             </a>
                         </li>
-                        <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/home', []) }}">
+                        <li class="nav-item {{ $menuActive == 'soal-ujian' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/soal', []) }}">
                                 <i class="fas fa-question-circle"></i>
                                 <span>Soal Ujian</span>
                             </a>
                         </li>
                         <li class="menu-header">Fitur</li>
-                        <li class="nav-item {{ $menuActive == 'home' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/home', []) }}">
+                        <li class="nav-item {{ $menuActive == 'hasil-ujian' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/hasilujian', []) }}">
                                 <i class="fas fa-poll-h"></i>
                                 <span>Hasil Ujian</span>
                             </a>
@@ -348,20 +357,21 @@
     <script src="https://demo.getstisla.com/assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script src="https://demo.getstisla.com/assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/chart.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="https://demo.getstisla.com/assets/modules/datatables/datatables.min.js"></script>
+    <script src="https://demo.getstisla.com/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script src="https://demo.getstisla.com/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
     <script src="https://demo.getstisla.com/assets/modules/summernote/summernote-bs4.js"></script>
     <script src="https://demo.getstisla.com/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
     <!-- Page Specific JS File -->
-    <script src="https://demo.getstisla.com/assets/js/page/index-0.js"></script>
+    <script src="https://demo.getstisla.com/assets/js/page/modules-datatables.js"></script>
 
     <!-- Template JS File -->
     <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
     <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
     @include('sweetalert::alert')
+    @yield('script')
 </body>
 
 </html>

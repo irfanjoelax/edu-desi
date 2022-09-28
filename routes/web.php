@@ -25,3 +25,7 @@ Auth::routes([
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/setting', [App\Http\Controllers\SettingController::class, 'index']);
 Route::post('/admin/setting', [App\Http\Controllers\SettingController::class, 'update']);
+
+Route::resource('/admin/matapelajaran', App\Http\Controllers\Admin\MataPelajaranController::class)->except('show');
+Route::resource('/admin/materi', App\Http\Controllers\Admin\MateriController::class)->except('show');
+Route::resource('/admin/soal', App\Http\Controllers\Admin\SoalController::class)->except('show');
