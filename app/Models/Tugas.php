@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MataPelajaran extends Model
+class Tugas extends Model
 {
     use HasFactory;
 
@@ -16,13 +16,13 @@ class MataPelajaran extends Model
      */
     protected $guarded = [];
 
-    public function materis()
+    public function jawabans()
     {
-        return $this->hasMany('App\Models\Materi', 'matapelajaran_id');
+        return $this->hasMany('App\Models\Jawaban');
     }
 
-    public function tugas()
+    public function matapelajaran()
     {
-        return $this->hasMany('App\Models\Tugas');
+        return $this->belongsTo('App\Models\MataPelajaran');
     }
 }

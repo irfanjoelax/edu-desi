@@ -8,15 +8,16 @@
 
     <!-- General CSS Files -->
     <link rel="shortcut icon" href="{{ asset('img/logo.svg') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap-social/bootstrap-social.css">
+    @yield('style')
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/components.min.css">
 </head>
 
 <body>
@@ -58,47 +59,46 @@
                                                     <a href="auth-forgot-password.html" class="text-small">
                                                         Forgot Password?
                                                     </a>
-                                                </div>
-                                            @endif
+                                                </div> @endif
                                         </div>
-                                        <input id="password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror" name="password"
-                                            tabindex="2" required>
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="remember" class="custom-control-input"
-                                                tabindex="3" id="remember-me" {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="custom-control-label" for="remember-me">Remember Me</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                                            Login
-                                        </button>
-                                    </div>
-                                    <div class="mt-4 text-muted text-center">
-                                        Don't have an account? <a href="{{ url('/register') }}">Create One</a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="simple-footer">
-                            Copyright &copy; {{ env('APP_NAME') }} {{ date('Y') }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                        <input id="password"
+        type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2"
+        required>
+    @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
-</body>
+
+    <div class="form-group">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me"
+                {{ old('remember') ? 'checked' : '' }}>
+            <label class="custom-control-label" for="remember-me">Remember Me</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+            Login
+        </button>
+    </div>
+    <div class="mt-4 text-muted text-center">
+        Don't have an account? <a href="{{ url('/register') }}">Create One</a>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    <div class="simple-footer">
+        Copyright &copy; {{ env('APP_NAME') }} {{ date('Y') }}
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    </body>
 
 </html>

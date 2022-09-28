@@ -8,21 +8,17 @@
 
     <!-- General CSS Files -->
     <link rel="shortcut icon" href="{{ asset('img/logo.svg') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/datatables/datatables.min.css">
-    <link rel="stylesheet"
-        href="https://demo.getstisla.com/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet"
-        href="https://demo.getstisla.com/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css">
     @yield('style')
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/components.min.css">
 </head>
 
 <body>
@@ -247,7 +243,8 @@
                     </li> --}}
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="https://demo.getstisla.com/assets/img/avatar/avatar-1.png"
+                            <img alt="image"
+                                src="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/img/avatar/avatar-1.png"
                                 class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block"> {{ Auth::user()->name }}</div>
                         </a>
@@ -305,14 +302,13 @@
                         <li class="nav-item {{ $menuActive == 'soal-ujian' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/admin/soal', []) }}">
                                 <i class="fas fa-question-circle"></i>
-                                <span>Soal Ujian</span>
+                                <span>Soal Latihan</span>
                             </a>
                         </li>
-                        <li class="menu-header">Fitur</li>
-                        <li class="nav-item {{ $menuActive == 'hasil-ujian' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/admin/hasilujian', []) }}">
+                        <li class="nav-item {{ $menuActive == 'tugas' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/tugas', []) }}">
                                 <i class="fas fa-poll-h"></i>
-                                <span>Hasil Ujian</span>
+                                <span>Daftar Tugas</span>
                             </a>
                         </li>
                     </ul>
@@ -347,29 +343,23 @@
         </div>
     </div>
 
+
     <!-- General JS Scripts -->
-    <script src="https://demo.getstisla.com/assets/modules/jquery.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/popper.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/tooltip.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/moment.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/js/stisla.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script src="https://demo.getstisla.com/assets/modules/datatables/datatables.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js">
-    </script>
-    <script src="https://demo.getstisla.com/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/summernote/summernote-bs4.js"></script>
-    <script src="https://demo.getstisla.com/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-
-    <!-- Page Specific JS File -->
-    <script src="https://demo.getstisla.com/assets/js/page/modules-datatables.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
     <!-- Template JS File -->
-    <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
-    <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/js/custom.js"></script>
+
     @include('sweetalert::alert')
     @yield('script')
 </body>
