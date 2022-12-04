@@ -19,5 +19,4 @@ Eduzius adalah aplikasi E-Learning untuk kebutuhan tugas akhir mahasiswa UMY
 - SweetAlert
 
 ### Developer
-Dibuat dan dikembangkan oleh [Muhammad Irfan Permana, S.Kom.](https://wa.me/+6283140617623).
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Dibuat dan dikembangkan oleh [Muhammad Irfan Permana, S.Kom.](https://wa.me/+6283140617623)
