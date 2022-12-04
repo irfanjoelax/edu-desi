@@ -23,7 +23,7 @@ class WebController extends Controller
     public function matapelajaran()
     {
         return view('matapelajaran', [
-            'menuActive'     => 'mata-pelajaran',
+            'menuActive'     => 'materi',
             'matapelajarans' => MataPelajaran::with('materis')->latest()->get(),
         ]);
     }
@@ -31,7 +31,7 @@ class WebController extends Controller
     public function matpelDetail($id)
     {
         return view('matapelajaran-detail', [
-            'menuActive'     => 'mata-pelajaran',
+            'menuActive'     => 'materi',
             'matapelajaran'  => MataPelajaran::find($id),
         ]);
     }
@@ -39,7 +39,7 @@ class WebController extends Controller
     public function latihansoal()
     {
         return view('latihansoal', [
-            'menuActive' => 'latihan-soal',
+            'menuActive' => 'kuis',
             'soals'      => Soal::latest()->get(),
         ]);
     }
@@ -102,7 +102,7 @@ class WebController extends Controller
             Alert::error('Tidak Lulus', $text);
         }
 
-        return redirect('latihansoal');
+        return redirect('kuis');
     }
 
     public function kirimtugas()

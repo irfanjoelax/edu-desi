@@ -8,25 +8,30 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table>
+                <table width="100%" class="">
                     <tr>
-                        <td width="100">NIM</td>
-                        <td>:</td>
+                        <td width="35%">NIM</td>
+                        <td width="5%">:</td>
                         <td>{{ $data->nim }}</td>
                     </tr>
                     <tr>
-                        <td width="100">Nama</td>
-                        <td>:</td>
+                        <td width="35%">Nama</td>
+                        <td width="5%">:</td>
                         <td>{{ $data->nama }}</td>
                     </tr>
                     <tr>
-                        <td width="100">Ahli Materi</td>
-                        <td>:</td>
+                        <td width="35%">Dosen Pembimbing</td>
+                        <td width="5%">:</td>
+                        <td>{{ $data->dospem }}</td>
+                    </tr>
+                    <tr>
+                        <td width="35%">Ahli Materi</td>
+                        <td width="5%">:</td>
                         <td>{{ $data->ahli_materi }}</td>
                     </tr>
                     <tr>
-                        <td width="100">Ahli Media</td>
-                        <td>:</td>
+                        <td width="35%">Ahli Media</td>
+                        <td width="5%">:</td>
                         <td>{{ $data->ahli_media }}</td>
                     </tr>
                 </table>

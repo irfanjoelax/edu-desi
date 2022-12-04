@@ -286,23 +286,29 @@
                                 <span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="menu-header">Master Data</li>
-                        <li class="nav-item {{ $menuActive == 'mata-pelajaran' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/admin/matapelajaran', []) }}">
-                                <i class="fas fa-book"></i>
-                                <span>Mata Pelajaran</span>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}" target="_blank">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Kunjungi Website</span>
                             </a>
                         </li>
+                        <li class="menu-header">Master Data</li>
                         <li class="nav-item {{ $menuActive == 'materi' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/admin/materi', []) }}">
-                                <i class="fas fa-book-reader"></i>
+                                <i class="fas fa-book"></i>
                                 <span>Materi</span>
                             </a>
                         </li>
-                        <li class="nav-item {{ $menuActive == 'soal-ujian' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/admin/soal', []) }}">
+                        <li class="nav-item {{ $menuActive == 'topik' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/topik', []) }}">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Topik</span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $menuActive == 'kuis' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/admin/kuis', []) }}">
                                 <i class="fas fa-question-circle"></i>
-                                <span>Soal Latihan</span>
+                                <span>Latihan Kuis</span>
                             </a>
                         </li>
                         <li class="nav-item {{ $menuActive == 'tugas' ? 'active' : '' }}">
@@ -315,7 +321,7 @@
 
                     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
                         <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                            <i class="fas fa-rocket"></i> Version 1.0.0
+                            <i class="fas fa-rocket"></i> Version 2.0.0
                         </a>
                     </div>
                 </aside>

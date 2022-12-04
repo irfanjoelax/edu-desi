@@ -12,13 +12,18 @@
     <div class="row mb-5">
         <div class="col-md-6 col-12 align-self-center">
             <h1 class="text-dark">
-                Membawa Kamu ke Tempat yang Kamu inginkan <span class="text-primary">Untuk Belajar</span>
+                SELAMAT DATANG di <span class="text-primary text-uppercase">{{ env('APP_NAME') }}</span>
             </h1>
             <p class="text-muted">
-                Semua yang perlu kamu ketahui untuk perjalanan studi kamu dari pencarian pertam hingga pembelajaran pertama
+                Media Pembelajaran Berbasis Web
+                Otomatisasi Tata Kelola Humas dan Keprotokolan
+                Manajemen Perkantoran dan Layanan Bisnis
+                <br>
+                “Membawa Kamu ke Tempat yang Kamu inginkan Untuk Belajar“
+                Selamat belajar!
             </p>
-            <a href="" class="btn btn-lg btn-primary">
-                Coba Pilihan Ganda
+            <a href="{{ url('/kuis') }}" class="btn btn-lg btn-primary">
+                Coba Latihan Kuis
             </a>
         </div>
         <div class="col-md-6 col-12">
@@ -46,7 +51,7 @@
                         <div class="article-category"><a href="#">{{ $matpel->materis->count() }} Materi</a>
                             <div class="bullet"></div> <a href="#">{{ $matpel->created_at->diffForHumans() }}</a>
                         </div>
-                        <a href="{{ url('matapelajaran/' . $matpel->id, []) }}" class="btn btn-outline-primary w-100 mt-3">
+                        <a href="{{ url('materi/' . $matpel->id, []) }}" class="btn btn-outline-primary w-100 mt-3">
                             Lihat Selengkapnya
                         </a>
                     </div>

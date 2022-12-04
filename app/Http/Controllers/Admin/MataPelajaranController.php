@@ -18,7 +18,7 @@ class MataPelajaranController extends Controller
     public function index()
     {
         return view('admin.matapelajaran.index', [
-            'menuActive'     => 'mata-pelajaran',
+            'menuActive'     => 'materi',
             'matapelajarans' => MataPelajaran::latest()->get(),
         ]);
     }
@@ -31,9 +31,9 @@ class MataPelajaranController extends Controller
     public function create()
     {
         return view('admin.matapelajaran.form', [
-            'menuActive' => 'mata-pelajaran',
+            'menuActive' => 'materi',
             'isEdit'     => false,
-            'url'        => url('admin/matapelajaran'),
+            'url'        => url('admin/materi'),
         ]);
     }
 
@@ -50,9 +50,9 @@ class MataPelajaranController extends Controller
             'slug' => Str::slug($request->nama),
         ]);
 
-        Alert::success('Berhasil', ucwords('data mata pelajaran telah ditambahkan'));
+        Alert::success('Berhasil', ucwords('data materi telah ditambahkan'));
 
-        return redirect('admin/matapelajaran');
+        return redirect('admin/materi');
     }
 
     /**
@@ -75,9 +75,9 @@ class MataPelajaranController extends Controller
     public function edit($id)
     {
         return view('admin.matapelajaran.form', [
-            'menuActive' => 'mata-pelajaran',
+            'menuActive' => 'materi',
             'isEdit'     => true,
-            'url'        => url('admin/matapelajaran/' . $id),
+            'url'        => url('admin/materi/' . $id),
             'data'       => MataPelajaran::find($id),
         ]);
     }
@@ -96,9 +96,9 @@ class MataPelajaranController extends Controller
             'slug' => Str::slug($request->nama),
         ]);
 
-        Alert::warning('Berhasil', ucwords('data mata pelajaran telah diperbarui'));
+        Alert::warning('Berhasil', ucwords('data materi telah diperbarui'));
 
-        return redirect('admin/matapelajaran');
+        return redirect('admin/materi');
     }
 
     /**
@@ -110,7 +110,7 @@ class MataPelajaranController extends Controller
     public function destroy($id)
     {
         MataPelajaran::find($id)->delete();
-        Alert::error('Berhasil', ucwords('data mata pelajaran telah dihapus'));
-        return redirect('admin/matapelajaran');
+        Alert::error('Berhasil', ucwords('data materi telah dihapus'));
+        return redirect('admin/materi');
     }
 }

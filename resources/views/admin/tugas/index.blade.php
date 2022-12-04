@@ -15,7 +15,7 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-center">Mata Pelajaran</th>
+                            <th class="text-center">Materi</th>
                             <th class="text-center">File Tugas</th>
                             <th class="text-center">Submit</th>
                             <th class="text-center">Action</th>

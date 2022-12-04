@@ -1,18 +1,18 @@
 @extends('layouts.web')
 
 @section('title')
-    Latihan Soal
+    Latihan Kuis
 @endsection
 
 @section('breadcrumb')
-    <div class="breadcrumb-item">Latihan Soal</div>
+    <div class="breadcrumb-item">Latihan Kuis</div>
 @endsection
 
 @section('content')
     <div class="row mb-2">
         <div class="col-12">
             <div class="text-center">
-                <h3 class="text-dark">Latihan Soal</h3>
+                <h3 class="text-dark">Latihan Kuis</h3>
                 <p class="text-muted">
                     Silakan kerjakan soal-soal dibawah ini dengan teliti dan benar
                 </p>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <form class="row mb-2" method="POST" action="{{ url('latihansoal', []) }}">
+    <form class="row mb-2" method="POST" action="{{ url('kuis', []) }}">
         @csrf
         <div class="col-md-2 col-12">
             <div class="row">

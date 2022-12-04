@@ -18,7 +18,7 @@ class SoalController extends Controller
     public function index()
     {
         return view('admin.soal.index', [
-            'menuActive' => 'soal-ujian',
+            'menuActive' => 'kuis',
             'soals'      => Soal::latest()->get(),
         ]);
     }
@@ -31,9 +31,9 @@ class SoalController extends Controller
     public function create()
     {
         return view('admin.soal.form', [
-            'menuActive' => 'soal-ujian',
+            'menuActive' => 'kuis',
             'isEdit'     => false,
-            'url'        => url('admin/soal'),
+            'url'        => url('admin/kuis'),
         ]);
     }
 
@@ -55,9 +55,9 @@ class SoalController extends Controller
             'kunci_jawaban' => $request->kunci_jawaban,
         ]);
 
-        Alert::success('Berhasil', ucwords('data soal ujian telah ditambahkan'));
+        Alert::success('Berhasil', ucwords('data latihan kuis telah ditambahkan'));
 
-        return redirect('admin/soal');
+        return redirect('admin/kuis');
     }
 
     /**
@@ -80,9 +80,9 @@ class SoalController extends Controller
     public function edit($id)
     {
         return view('admin.soal.form', [
-            'menuActive' => 'soal-ujian',
+            'menuActive' => 'kuis',
             'isEdit'     => true,
-            'url'        => url('admin/soal/' . $id),
+            'url'        => url('admin/kuis/' . $id),
             'data'       => Soal::find($id),
         ]);
     }
@@ -106,9 +106,9 @@ class SoalController extends Controller
             'kunci_jawaban' => $request->kunci_jawaban,
         ]);
 
-        Alert::warning('Berhasil', ucwords('data soal ujian telah diperbarui'));
+        Alert::warning('Berhasil', ucwords('data latihan kuis telah diperbarui'));
 
-        return redirect('admin/soal');
+        return redirect('admin/kuis');
     }
 
     /**
@@ -120,7 +120,7 @@ class SoalController extends Controller
     public function destroy($id)
     {
         Soal::find($id)->delete();
-        Alert::error('Berhasil', ucwords('data soal ujian telah dihapus'));
-        return redirect('admin/soal');
+        Alert::error('Berhasil', ucwords('data latihan kuis telah dihapus'));
+        return redirect('admin/kuis');
     }
 }

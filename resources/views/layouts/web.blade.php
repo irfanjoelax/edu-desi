@@ -64,16 +64,16 @@
                                 <span>Beranda</span>
                             </a>
                         </li>
-                        <li class="nav-item {{ $menuActive == 'mata-pelajaran' ? 'active' : '' }}">
-                            <a href="{{ url('/matapelajaran', []) }}" class="nav-link">
+                        <li class="nav-item {{ $menuActive == 'materi' ? 'active' : '' }}">
+                            <a href="{{ url('/materi', []) }}" class="nav-link">
                                 <i class="fas fa-book"></i>
-                                <span>Mata Pelajaran</span>
+                                <span>Materi</span>
                             </a>
                         </li>
-                        <li class="nav-item {{ $menuActive == 'latihan-soal' ? 'active' : '' }}">
-                            <a href="{{ url('/latihansoal', []) }}" class="nav-link">
+                        <li class="nav-item {{ $menuActive == 'kuis' ? 'active' : '' }}">
+                            <a href="{{ url('/kuis', []) }}" class="nav-link">
                                 <i class="fas fa-book-reader"></i>
-                                <span>Latihan Soal</span>
+                                <span>Kuis</span>
                             </a>
                         </li>
                         <li class="nav-item {{ $menuActive == 'kirim-tugas' ? 'active' : '' }}">

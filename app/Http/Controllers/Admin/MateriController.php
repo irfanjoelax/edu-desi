@@ -20,7 +20,7 @@ class MateriController extends Controller
     public function index()
     {
         return view('admin.materi.index', [
-            'menuActive' => 'materi',
+            'menuActive' => 'topik',
             'materis'    => Materi::with('matapelajaran')->latest()->get(),
         ]);
     }
@@ -33,9 +33,9 @@ class MateriController extends Controller
     public function create()
     {
         return view('admin.materi.form', [
-            'menuActive'    => 'materi',
+            'menuActive'    => 'topik',
             'isEdit'        => false,
-            'url'           => url('admin/materi'),
+            'url'           => url('admin/topik'),
             'matapelajaran' => MataPelajaran::latest()->get(),
         ]);
     }
@@ -61,9 +61,9 @@ class MateriController extends Controller
             'file'             => $namaFile,
         ]);
 
-        Alert::success('Berhasil', ucwords('data materi telah ditambahkan'));
+        Alert::success('Berhasil', ucwords('data topik telah ditambahkan'));
 
-        return redirect('admin/materi');
+        return redirect('admin/topik');
     }
 
     /**
@@ -86,9 +86,9 @@ class MateriController extends Controller
     public function edit($id)
     {
         return view('admin.materi.form', [
-            'menuActive' => 'materi',
+            'menuActive' => 'topik',
             'isEdit'     => true,
-            'url'        => url('admin/materi/' . $id),
+            'url'        => url('admin/topik/' . $id),
             'matapelajaran' => MataPelajaran::latest()->get(),
             'data'       => Materi::find($id),
         ]);
@@ -123,9 +123,9 @@ class MateriController extends Controller
             'file'             => $namaFile,
         ]);
 
-        Alert::warning('Berhasil', ucwords('data materi telah diperbarui'));
+        Alert::warning('Berhasil', ucwords('data topik telah diperbarui'));
 
-        return redirect('admin/materi');
+        return redirect('admin/topik');
     }
 
     /**
@@ -142,7 +142,7 @@ class MateriController extends Controller
 
         $materi->delete();
 
-        Alert::error('Berhasil', ucwords('data materi telah dihapus'));
-        return redirect('admin/materi');
+        Alert::error('Berhasil', ucwords('data topik telah dihapus'));
+        return redirect('admin/topik');
     }
 }
