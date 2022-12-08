@@ -23,6 +23,6 @@ class MataPelajaran extends Model
 
     public function tugas()
     {
-        return $this->hasMany('App\Models\Tugas');
+        return $this->hasMany('App\Models\Tugas', 'tugas_id');
     }
 }

@@ -20,7 +20,7 @@ class TugasController extends Controller
     {
         return view('admin.tugas.index', [
             'menuActive' => 'tugas',
-            'tugas'      => Tugas::with('jawabans')->latest()->get(),
+            'tugas'      => Tugas::with('jawabans', 'matapelajaran')->latest()->get(),
         ]);
     }
 

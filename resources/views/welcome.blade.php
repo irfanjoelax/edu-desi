@@ -15,9 +15,7 @@
                 SELAMAT DATANG di <span class="text-primary text-uppercase">{{ env('APP_NAME') }}</span>
             </h1>
             <p class="text-muted">
-                Media Pembelajaran Berbasis Web
-                Otomatisasi Tata Kelola Humas dan Keprotokolan
-                Manajemen Perkantoran dan Layanan Bisnis
+                Media Pembelajaran Berbasis Web Otomatisasi Tata dan Kelola dan Keprotokolan
                 <br>
                 “Membawa Kamu ke Tempat yang Kamu inginkan Untuk Belajar“
                 Selamat belajar!

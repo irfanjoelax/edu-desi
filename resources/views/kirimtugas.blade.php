@@ -25,8 +25,8 @@
                         {!! $data->konten !!}
 
                         <div class="mt-3">
-                            <a href="{{ asset('storage/tugas/file/' . $data->file) }}" target="_blank"
-                                class="btn btn-primary">
+                            <a href="{{ $data->file != null ? asset('storage/tugas/file/' . $data->file) : '#' }}"
+                                target="_blank" class="btn btn-primary">
                                 Download File Tugas
                             </a>
                             <a href="{{ url('kirimtugas/submit/' . $data->id) }}" class="btn btn-warning ml-2">

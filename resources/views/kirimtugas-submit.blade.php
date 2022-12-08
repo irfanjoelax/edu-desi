@@ -12,7 +12,7 @@
     <div class="row mb-2">
         <div class="col-md-7 col-12">
             <div class="mb-4">
-                <h4 class="text-dark">Mata Pelajaran</h4>
+                <h4 class="text-dark">Materi</h4>
                 {{ $tugas->matapelajaran->nama }}
             </div>
             <div class="mb-4">

@@ -26,7 +26,7 @@
                             <tr>
                                 <td class="text-center">{{ $loop->iteration }}</td>
                                 <td class="text-center">
-                                    {{ $item->matapelajaran->nama }}
+                                    {{ $item->matapelajaran }}
                                 </td>
                                 <td class="text-center">
                                     @if ($item->file == null)
