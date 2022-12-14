@@ -27,7 +27,7 @@
                                 {{ $matpel->nama }}
                             </h5>
                         </div>
-                        <div class="article-category"><a href="#">{{ $matpel->materis->count() }} Materi</a>
+                        <div class="article-category"><a href="#">{{ $matpel->materis->count() }} Topik</a>
                             <div class="bullet"></div> <a href="#">{{ $matpel->created_at->diffForHumans() }}</a>
                         </div>
                         <a href="{{ url('materi/' . $matpel->id, []) }}" class="btn btn-outline-primary w-100 mt-3">

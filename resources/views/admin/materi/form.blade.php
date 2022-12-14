@@ -46,12 +46,18 @@
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <label for="konten" class="col-sm-2 col-form-label">File Topik</label>
+                    <label for="konten" class="col-sm-2 col-form-label">
+                        File Topik <sup class="text-danger">*.pdf</sup>
+                    </label>
                     <div class="col-sm-10">
-                        <input name="file" type="file" />
+                        <input name="file" type="file" @if (!$isEdit) required @endif />
                         @if ($isEdit)
                             <small class="form-text text-danger">
                                 Kosongkan jika tidak ingin mengubah file topik
+                            </small>
+                        @else
+                            <small class="form-text text-danger">
+                                File harus berekstensi PDF
                             </small>
                         @endif
                     </div>

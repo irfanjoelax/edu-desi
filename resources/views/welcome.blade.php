@@ -17,7 +17,7 @@
             <p class="text-muted">
                 Media Pembelajaran Berbasis Web Humas dan Keprotokolan <br>
                 Otomatisasi Tata dan Kelola Perkantoran <br>
-                “Membawa Kamu ke Tempat yang Kamu inginkan Untuk Belajar“
+                “Membawa Kamu ke Tempat yang Kamu Inginkan Untuk Belajar“
                 Selamat belajar!
             </p>
             <a href="{{ url('/kuis') }}" class="btn btn-lg btn-primary">

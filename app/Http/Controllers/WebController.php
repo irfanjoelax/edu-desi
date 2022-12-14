@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jawaban;
+use App\Models\Kompetensi;
 use App\Models\MataPelajaran;
+use App\Models\Materi;
 use App\Models\Soal;
 use App\Models\Tugas;
 use Illuminate\Http\Request;
@@ -20,6 +22,14 @@ class WebController extends Controller
         ]);
     }
 
+    public function kompetensi()
+    {
+        return view('kompetensi', [
+            'menuActive' => 'kompetensi',
+            'kompetensi' => Kompetensi::first(),
+        ]);
+    }
+
     public function matapelajaran()
     {
         return view('matapelajaran', [
@@ -33,6 +43,14 @@ class WebController extends Controller
         return view('matapelajaran-detail', [
             'menuActive'     => 'materi',
             'matapelajaran'  => MataPelajaran::find($id),
+        ]);
+    }
+
+    public function topik($id)
+    {
+        return view('topik', [
+            'menuActive' => 'materi',
+            'topik'      => Materi::find($id),
         ]);
     }
 

@@ -17,9 +17,17 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/stisla@2.3.0/assets/css/components.min.css">
+    <style>
+        body {
+            font-size: 1.05rem !important;
+        }
+    </style>
 </head>
 
 <body class="layout-3">
+
+
+
     <div id="app">
         <div class="main-wrapper container">
             <div class="navbar-bg"></div>
@@ -62,6 +70,12 @@
                             <a href="{{ url('/', []) }}" class="nav-link">
                                 <i class="fas fa-fire"></i>
                                 <span>Beranda</span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $menuActive == 'kompetensi' ? 'active' : '' }}">
+                            <a href="{{ url('/kompetensi', []) }}" class="nav-link">
+                                <i class="fas fa-brain"></i>
+                                <span>Kompetensi</span>
                             </a>
                         </li>
                         <li class="nav-item {{ $menuActive == 'materi' ? 'active' : '' }}">

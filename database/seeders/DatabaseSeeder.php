@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             MataPelajaranSeeder::class,
             SoalSeeder::class,
             PenelitiSeeder::class,
+            KompetensiSeeder::class,
         ]);
     }
 }
