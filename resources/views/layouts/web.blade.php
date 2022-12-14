@@ -21,6 +21,11 @@
         body {
             font-size: 1.05rem !important;
         }
+
+        .navbar-secondary .navbar-nav .nav-link,
+        i {
+            font-size: 1.05rem !important;
+        }
     </style>
 </head>
 
